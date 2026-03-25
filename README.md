@@ -53,17 +53,17 @@ Q. 	Why this article?
 	
 A. 	Multiple reasons exist for why this article was written and published: 
 	
-	1. The Microsoft documentation team cannot publish updates fast enough to keep up with their in-house development team. 
+1. The Microsoft documentation team cannot publish updates fast enough to keep up with their in-house development team. 
 	
-		a. Updates to Dot NET often require updates to coding for use with Blazor Web Apps. 
+	a. Updates to Dot NET often require updates to coding for use with Blazor Web Apps. 
 		
-		b. At least 19 changes in the past 8 years have broken legacy code for Microsoft Dot NET, and some of those changes have affected Role-based Authentication. 
+	b. At least 19 changes in the past 8 years have broken legacy code for Microsoft Dot NET, and some of those changes have affected Role-based Authentication. 
 			
-	2. Online postings to industry websites often contain outdated information, which was once helpful, but are now of no use at all; yet these pages are never taken out of publication, which causes a lot of frustration for web developers.
+2. Online postings to industry websites often contain outdated information, which was once helpful, but are now of no use at all; yet these pages are never taken out of publication, which causes a lot of frustration for web developers.
 	
-	3. The ASP.NET database model has changed in recent months (online tutorials from August to October 2025 are no longer useful for Authentication/Authorization).
+3. The ASP.NET database model has changed in recent months (online tutorials from August to October 2025 are no longer useful for Authentication/Authorization).
 	
-    4. This article brings coding for [Role-based Authentication for Blazor Web Apps with Microsoft Dot NET 10] current as of 2026-03-21. 
+4. This article brings coding for [Role-based Authentication for Blazor Web Apps with Microsoft Dot NET 10] current as of 2026-03-21. 
 
 ## Prerequisites
 
