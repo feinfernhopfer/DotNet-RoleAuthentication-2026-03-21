@@ -171,30 +171,30 @@ H.	Repeat the steps for each new record to be created in the [AspNetUsers]::data
 				f)	Execute the query.
 				g)	Repeat the steps for each new record to be created in the [AspNetRoles]::datatable.
 					
-7.	Assign Roles to Users.
+B.	Assign Roles to Users.
 	Use SQL Server Management Studio to assign Roles to Users.
 	Use the command line window to write the TSQL script to create the new records for User-Roles.
-	A.	In the Explorer pane located at the left of the IDE, right-click on the [AspNetUserRoles]::datatable.
-	B.	Select "Script Table as"...
-	C.	Select "Insert to"...
-	D.	Select "New Query Editor Window".
-		1)	Prepare a new INSERT query. 
-			a)	A template will appear in the window. Modify the template to match your needs, then create the new record.
-			b)	In the Query Editor, modify the provided script to suit your specific needs to create the new record.
-			c)	Gather the specific text strings to modify the template.
-				i)	Copy/Paste the User ID (a string - nvarchar datatype - for the GUID that identifies the particular User).
-					aa)	Open a select query to capture the particular ID for the User.
-					bb)	Right click on the [AspNetUsers]::datatable. 
-					cc)	Select "Select Top 1000 Rows". A datagrid will then populate with the records already in the datatable.
-					dd)	Left-click on the particular [Id] of the User, then right-click and select, "Copy".
-					ee)	Right-click to paste the [Id] string into the query window of the [newInsertQuery.sql] file (N'<ParticularUserGuid>'). 
-				ii)	Copy/Paste the Role ID (a string - nvarchar datatype that identifies the particular Role). 
-					aa)	Open a select query to capture the particular ID for the Role.
-					bb)	Right click on the [AspNetRoles]::datatable. 
-					cc)	Select "Select Top 1000 Rows". A datagrid will then populate with the records already in the datatable.
-					dd)	Left-click on the particular [Id] of the Role, then right-click and select, "Copy".
-					ee)	Right-click to paste the [Id] string into the query window of the [newInsertQuery.sql] file (N'<ParticularRoleNameId>'). 
-			d)	Execute the query.
+	1)	In the Explorer pane located at the left of the IDE, right-click on the [AspNetUserRoles]::datatable.
+	2).	Select "Script Table as"...
+	3).	Select "Insert to"...
+	4).	Select "New Query Editor Window".
+		a)	Prepare a new INSERT query. 
+			i)	A template will appear in the window. Modify the template to match your needs, then create the new record.
+			ii)	In the Query Editor, modify the provided script to suit your specific needs to create the new record.
+			iii)	Gather the specific text strings to modify the template.
+				A)	Copy/Paste the User ID (a string - nvarchar datatype - for the GUID that identifies the particular User).
+					1)	Open a select query to capture the particular ID for the User.
+					2)	Right click on the [AspNetUsers]::datatable. 
+					3)	Select "Select Top 1000 Rows". A datagrid will then populate with the records already in the datatable.
+					4)	Left-click on the particular [Id] of the User, then right-click and select, "Copy".
+					5)	Right-click to paste the [Id] string into the query window of the [newInsertQuery.sql] file (N'<ParticularUserGuid>'). 
+				B)	Copy/Paste the Role ID (a string - nvarchar datatype that identifies the particular Role). 
+					1)	Open a select query to capture the particular ID for the Role.
+					2)	Right click on the [AspNetRoles]::datatable. 
+					3)	Select "Select Top 1000 Rows". A datagrid will then populate with the records already in the datatable.
+					4)	Left-click on the particular [Id] of the Role, then right-click and select, "Copy".
+					5)	Right-click to paste the [Id] string into the query window of the [newInsertQuery.sql] file (N'<ParticularRoleNameId>'). 
+				iv)	Execute the query.
 					
 					USE [aspnet-myBlazerApp-2026-03-21]
 					GO
@@ -206,11 +206,11 @@ H.	Repeat the steps for each new record to be created in the [AspNetUsers]::data
 							   ,N'')
 					GO
 
-			e)	Repeat the steps for each new record to be created in the [AspNetUserRoles]::datatable.
+			v)	Repeat the steps for each new record to be created in the [AspNetUserRoles]::datatable.
 
-8.	The Blazor web app is now ready for use/testing.
+3.	The Blazor web app is now ready for use/testing.
 
-9. Use Visual Studio to test the code for functionality. 
+4. Use Visual Studio to test the code for functionality. 
 	A. Use the Visual Studio (integral debugging) Web Browser to verify functionality: 
 		1) User log-in.
 		2) User authorization. 
