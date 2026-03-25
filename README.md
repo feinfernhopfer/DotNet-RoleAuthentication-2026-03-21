@@ -18,7 +18,8 @@ Note - The code and script used here worked well with the Community Edition(s) o
 
 An easy and simple 20-minute process.
 
- Manual Editing required (Visual Studio): 
+
+# Manual Editing required (Visual Studio): 
 
 1 - Create a new Blazor Web App using 'Individual Accounts' for Authentication Type (and 'Include sample pages')
 
@@ -28,11 +29,11 @@ An easy and simple 20-minute process.
 
 4 - Edit the target pages to add an AuthorizeView control
 
- Automated Editing required (Visual Studio): 
+## Automated Editing required (Visual Studio): 
 
 5 - Use the Package Manager Console to Create and Configure an ASP.NET database (for the Identity and EntityFrameworkCore features)
 
- Manual Editing required: Editing required (Visual Studio): 
+### Manual Editing required: Editing required (Visual Studio): 
 
 6 - Use the Visual Studio (integral debugging) Web Browser to Create New Users
 
