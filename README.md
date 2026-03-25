@@ -11,27 +11,30 @@ These files demonstrate how to configure User Authentication:
 ## Summary
 
 Set up a Blazor web app to use role-based authentication in the development environment. 
+
 Coding for use and testing on the development machine with the IIS web server that comes with the Visual Studio IDE. 
+
 Note - The code and script used here worked well with the Community Edition(s) of the Microsoft development tools. 
+
 An easy and simple 20-minute process.
 
-Manual Editing required (Visual Studio): 
+# Manual Editing required (Visual Studio): 
 1 - Create a new Blazor Web App using 'Individual Accounts' for Authentication Type (and 'Include sample pages')
 2 - Edit the Blazor App's /appsettings.json file to set the connection string for data access
 3 - Edit the Blazor App's /Program.cs file to use the Authentication and Authorization features
 4 - Edit the target pages to add an AuthorizeView control
 
-Automated Editing required (Visual Studio): 
+# Automated Editing required (Visual Studio): 
 5 - Use the Package Manager Console to Create and Configure an ASP.NET database (for the Identity and EntityFrameworkCore features)
 
-Manual Editing required: Editing required (Visual Studio): 
+# Manual Editing required: Editing required (Visual Studio): 
 6 - Use the Visual Studio (integral debugging) Web Browser to Create New Users
 
-Manual Editing required: Editing required (SSMS): 
+# Manual Editing required: Editing required (SSMS): 
 7 - Use SQL Server Management Studio to Create New Roles (for Users)
 8 - Use SQL Server Management Studio to Create New Assignment of Roles to Users
 
-Testing:  (Visual Studio): 
+# Testing:  (Visual Studio): 
 9 - Use the Visual Studio (integral) Web Browser to test for functionality when using Authentication and Authorization features in a Blazor Web App
 
 ### Why this article?
