@@ -245,13 +245,13 @@ Use the command line window to write the TSQL script to create the new records f
 
 4).	Select "New Query Editor Window".
 
-a)	Prepare a new INSERT query.	
-
+a)	Prepare a new INSERT query.
+	
 	i)	A template will appear in the window. Modify the template to match your needs, then create the new record.
 		
 	ii)	In the Query Editor, modify the provided script to suit your specific needs to create the new record.
 		
-	iii)	Gather the specific text strings to modify the template.
+	i	ii)	Gather the specific text strings to modify the template.
 
 A)	Copy/Paste the User ID (a string - nvarchar datatype - for the GUID that identifies the particular User).
 	
