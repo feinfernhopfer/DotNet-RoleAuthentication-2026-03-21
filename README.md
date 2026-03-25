@@ -167,27 +167,27 @@ NOTE - Be sure to include, 'TrustServerCertificate=true;' because you are using 
 		
 F. Save the changes.
 
-	1) Clean Build.
+1) Clean Build.
 	
-	2) Rebuild.
+2) Rebuild.
 	
-	3) Save All.
+3) Save All.
 
 G.	Create the new Users.
 	
-	Use Visual Studio debugging browser to create the new Users. 
+Use Visual Studio debugging browser to create the new Users. 
 
-	1)	Run the app in the IDE.
+1)	Run the app in the IDE.
 		
-	2)	Use the REGISTER page to create a new user. 
+2)	Use the REGISTER page to create a new user. 
 		
-		a) Enter the user specifics. 
+	a) Enter the user specifics. 
 			
-		b) Click here to confirm your account.
+	b) Click here to confirm your account.
 			
-		c) Log in.
+	c) Log in.
 			
-		d) Log out.
+	d) Log out.
 			
 H.	Repeat the steps for each new record to be created in the [AspNetUsers]::datatable.
 
@@ -225,40 +225,40 @@ H.	Repeat the steps for each new record to be created in the [AspNetUsers]::data
 									,N'')
 						   GO
 
-				f)	Execute the query.
-				g)	Repeat the steps for each new record to be created in the [AspNetRoles]::datatable.
+			f)	Execute the query.
+			g)	Repeat the steps for each new record to be created in the [AspNetRoles]::datatable.
 					
 B.	Assign Roles to Users.
 	
-	Use SQL Server Management Studio to assign Roles to Users.
+Use SQL Server Management Studio to assign Roles to Users.
 
-	Use the command line window to write the TSQL script to create the new records for User-Roles.
+Use the command line window to write the TSQL script to create the new records for User-Roles.
 
-	1)	In the Explorer pane located at the left of the IDE, right-click on the [AspNetUserRoles]::datatable.
+1)	In the Explorer pane located at the left of the IDE, right-click on the [AspNetUserRoles]::datatable.
 		
-	2).	Select "Script Table as"...
+2).	Select "Script Table as"...
 
-	3).	Select "Insert to"...
+3).	Select "Insert to"...
 
-	4).	Select "New Query Editor Window".
+4).	Select "New Query Editor Window".
 
-	a)	Prepare a new INSERT query. 
-		i)	A template will appear in the window. Modify the template to match your needs, then create the new record.
-		ii)	In the Query Editor, modify the provided script to suit your specific needs to create the new record.
-		iii)	Gather the specific text strings to modify the template.
-			A)	Copy/Paste the User ID (a string - nvarchar datatype - for the GUID that identifies the particular User).
-				1)	Open a select query to capture the particular ID for the User.
-				2)	Right click on the [AspNetUsers]::datatable. 
-				3)	Select "Select Top 1000 Rows". A datagrid will then populate with the records already in the datatable.
-				4)	Left-click on the particular [Id] of the User, then right-click and select, "Copy".
-				5)	Right-click to paste the [Id] string into the query window of the [newInsertQuery.sql] file (N'<ParticularUserGuid>'). 
-			B)	Copy/Paste the Role ID (a string - nvarchar datatype that identifies the particular Role). 
-				1)	Open a select query to capture the particular ID for the Role.
-				2)	Right click on the [AspNetRoles]::datatable. 
-				3)	Select "Select Top 1000 Rows". A datagrid will then populate with the records already in the datatable.
-				4)	Left-click on the particular [Id] of the Role, then right-click and select, "Copy".
-				5)	Right-click to paste the [Id] string into the query window of the [newInsertQuery.sql] file (N'<ParticularRoleNameId>'). 
-		iv)	Execute the query.
+a)	Prepare a new INSERT query. 
+	i)	A template will appear in the window. Modify the template to match your needs, then create the new record.
+	ii)	In the Query Editor, modify the provided script to suit your specific needs to create the new record.
+	iii)	Gather the specific text strings to modify the template.
+		A)	Copy/Paste the User ID (a string - nvarchar datatype - for the GUID that identifies the particular User).
+			1)	Open a select query to capture the particular ID for the User.
+			2)	Right click on the [AspNetUsers]::datatable. 
+			3)	Select "Select Top 1000 Rows". A datagrid will then populate with the records already in the datatable.
+			4)	Left-click on the particular [Id] of the User, then right-click and select, "Copy".
+			5)	Right-click to paste the [Id] string into the query window of the [newInsertQuery.sql] file (N'<ParticularUserGuid>'). 
+		B)	Copy/Paste the Role ID (a string - nvarchar datatype that identifies the particular Role). 
+			1)	Open a select query to capture the particular ID for the Role.
+			2)	Right click on the [AspNetRoles]::datatable. 
+			3)	Select "Select Top 1000 Rows". A datagrid will then populate with the records already in the datatable.
+			4)	Left-click on the particular [Id] of the Role, then right-click and select, "Copy".
+			5)	Right-click to paste the [Id] string into the query window of the [newInsertQuery.sql] file (N'<ParticularRoleNameId>'). 
+	iv)	Execute the query.
 					
 					USE [aspnet-myBlazerApp-2026-03-21]
 					GO
