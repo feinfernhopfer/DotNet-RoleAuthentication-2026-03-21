@@ -91,7 +91,7 @@ The application uses SQL Server and entity framework.
 ### PROCESS: 
 
 1. Use Visual Studio to create the web app. 
-1. 
+
 	A.	From the Visual Studio IDE
 		
 		1) NEW: Create a new Blazor web app.
