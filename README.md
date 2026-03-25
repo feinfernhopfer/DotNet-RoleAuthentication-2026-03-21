@@ -243,21 +243,37 @@ Use the command line window to write the TSQL script to create the new records f
 4).	Select "New Query Editor Window".
 
 a)	Prepare a new INSERT query. 
+	
 	i)	A template will appear in the window. Modify the template to match your needs, then create the new record.
+		
 	ii)	In the Query Editor, modify the provided script to suit your specific needs to create the new record.
+		
 	iii)	Gather the specific text strings to modify the template.
-		A)	Copy/Paste the User ID (a string - nvarchar datatype - for the GUID that identifies the particular User).
-			1)	Open a select query to capture the particular ID for the User.
-			2)	Right click on the [AspNetUsers]::datatable. 
-			3)	Select "Select Top 1000 Rows". A datagrid will then populate with the records already in the datatable.
-			4)	Left-click on the particular [Id] of the User, then right-click and select, "Copy".
-			5)	Right-click to paste the [Id] string into the query window of the [newInsertQuery.sql] file (N'<ParticularUserGuid>'). 
+			
+	A)	Copy/Paste the User ID (a string - nvarchar datatype - for the GUID that identifies the particular User).
+
+		1)	Open a select query to capture the particular ID for the User.
+			
+		2)	Right click on the [AspNetUsers]::datatable. 
+			
+		3)	Select "Select Top 1000 Rows". A datagrid will then populate with the records already in the datatable.
+			
+		4)	Left-click on the particular [Id] of the User, then right-click and select, "Copy".
+			
+		5)	Right-click to paste the [Id] string into the query window of the [newInsertQuery.sql] file (N'<ParticularUserGuid>'). 
+			
 		B)	Copy/Paste the Role ID (a string - nvarchar datatype that identifies the particular Role). 
+		
 			1)	Open a select query to capture the particular ID for the Role.
+				
 			2)	Right click on the [AspNetRoles]::datatable. 
+				
 			3)	Select "Select Top 1000 Rows". A datagrid will then populate with the records already in the datatable.
+				
 			4)	Left-click on the particular [Id] of the Role, then right-click and select, "Copy".
+				
 			5)	Right-click to paste the [Id] string into the query window of the [newInsertQuery.sql] file (N'<ParticularRoleNameId>'). 
+				
 	iv)	Execute the query.
 					
 					USE [aspnet-myBlazerApp-2026-03-21]
