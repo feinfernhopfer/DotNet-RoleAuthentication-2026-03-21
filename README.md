@@ -91,16 +91,25 @@ The application uses SQL Server and entity framework.
 ### PROCESS: 
 
 1. Use Visual Studio to create the web app. 
+1. 
 	A.	From the Visual Studio IDE
+		
 		1) NEW: Create a new Blazor web app.
+		
 		2) Set the name for the new web app (for example, <myBlazorApp>).
+		
 		3) Select 'Individual Accounts' as Authentication type (necessary for user authentication).
+		
 		4) Select 'Include sample pages' (necessary for adding new users with the 'Register' page).
+		
 		5) The IDE creates and opens the new Blazor Web App.
 		
 	B.	Set the connection string for the Microsoft SQL Server database (in the /appsettings.json file).
+		
 		NOTE - SQL Server installed on the development machine. 
+
 		NOTE - Be sure to include, 'TrustServerCertificate=true;' because you are using a bogus certificate for development.
+
 		1) Edit the (/appsettings.json) file.
 		
 				"ConnectionStrings": {"DefaultConnection": 
@@ -110,14 +119,21 @@ The application uses SQL Server and entity framework.
 					MultipleActiveResultSets=true"},
 
 	C. Build the ASP.NET database using the automated tools in Visual Studio. 
+		
 		1)	Look for the Tools menu located at the upper menu bar in Visual Studio.
+			
 				Tools > Nuget Package Manager > Package Manager Console
+
 		2)	The command line tool (PMC) opens at the center bottom pane of the IDE.
+			
 			Use the Update-database feature to create and configure the ASP.NET database for use with Blazor Authentication and Authorization. 
+
 				>Update-Database
+
 			a)	Expect a 'Build succeeded' message followed by a brief pause, 
 				then wait for the success message, 'Done' 
 				(the Happy Path, else correct whatever went wrong and then repeat using the PMC).
+
 			b)	The PMC indicates that database is ready for use ('Done.' message).
 	
 	D.	Configure the main web app file (/Program.cs). Add 4 lines of code. 
@@ -150,31 +166,52 @@ The application uses SQL Server and entity framework.
 				</AuthorizeView>
 		
 F. Save the changes.
-			1) Clean Build.
-			2) Rebuild.
-			3) Save All.
+
+	1) Clean Build.
+	
+	2) Rebuild.
+	
+	3) Save All.
 
 G.	Create the new Users.
+	
 	Use Visual Studio debugging browser to create the new Users. 
+
 	1)	Run the app in the IDE.
+		
 	2)	Use the REGISTER page to create a new user. 
+		
 		a) Enter the user specifics. 
+			
 		b) Click here to confirm your account.
+			
 		c) Log in.
+			
 		d) Log out.
+			
 H.	Repeat the steps for each new record to be created in the [AspNetUsers]::datatable.
 
-2. Use SQL Server Management Studio to add functionality to the Web App. 
+2. Use SQL Server Management Studio to add functionality to the Web App.
+
 	A. Create the new Roles.
+		
 	Use SQL Server Management Studio to create the new Roles.
+
 	Use the command line window to write the TSQL script to create the new records for Roles.
-		1) Open SSMS.
-		2) Use the command line window to write the TSQL script to create the new Roles.
-			a)	In the Explorer pane located at the left of the IDE, right-click on the [AspNetRoles]::datatable.
-			b)	Select "Script Table as"...
-			c)	Select "Insert to"...
-			d)	Select "New Query Editor Window".
-			e)	Modify the template to match the specifics for creating a new record.
+
+	1) Open SSMS.
+	
+	2) Use the command line window to write the TSQL script to create the new Roles.
+	
+		a)	In the Explorer pane located at the left of the IDE, right-click on the [AspNetRoles]::datatable.
+			
+		b)	Select "Script Table as"...
+			
+		c)	Select "Insert to"...
+			
+		d)	Select "New Query Editor Window".
+			
+		e)	Modify the template to match the specifics for creating a new record.
 			
 							USE [aspnet-myBlazerApp-2026-03-21]		
 							GO
@@ -192,29 +229,36 @@ H.	Repeat the steps for each new record to be created in the [AspNetUsers]::data
 				g)	Repeat the steps for each new record to be created in the [AspNetRoles]::datatable.
 					
 B.	Assign Roles to Users.
+	
 	Use SQL Server Management Studio to assign Roles to Users.
+
 	Use the command line window to write the TSQL script to create the new records for User-Roles.
+
 	1)	In the Explorer pane located at the left of the IDE, right-click on the [AspNetUserRoles]::datatable.
+		
 	2).	Select "Script Table as"...
+
 	3).	Select "Insert to"...
+
 	4).	Select "New Query Editor Window".
-		a)	Prepare a new INSERT query. 
-			i)	A template will appear in the window. Modify the template to match your needs, then create the new record.
-			ii)	In the Query Editor, modify the provided script to suit your specific needs to create the new record.
-			iii)	Gather the specific text strings to modify the template.
-				A)	Copy/Paste the User ID (a string - nvarchar datatype - for the GUID that identifies the particular User).
-					1)	Open a select query to capture the particular ID for the User.
-					2)	Right click on the [AspNetUsers]::datatable. 
-					3)	Select "Select Top 1000 Rows". A datagrid will then populate with the records already in the datatable.
-					4)	Left-click on the particular [Id] of the User, then right-click and select, "Copy".
-					5)	Right-click to paste the [Id] string into the query window of the [newInsertQuery.sql] file (N'<ParticularUserGuid>'). 
-				B)	Copy/Paste the Role ID (a string - nvarchar datatype that identifies the particular Role). 
-					1)	Open a select query to capture the particular ID for the Role.
-					2)	Right click on the [AspNetRoles]::datatable. 
-					3)	Select "Select Top 1000 Rows". A datagrid will then populate with the records already in the datatable.
-					4)	Left-click on the particular [Id] of the Role, then right-click and select, "Copy".
-					5)	Right-click to paste the [Id] string into the query window of the [newInsertQuery.sql] file (N'<ParticularRoleNameId>'). 
-				iv)	Execute the query.
+
+	a)	Prepare a new INSERT query. 
+		i)	A template will appear in the window. Modify the template to match your needs, then create the new record.
+		ii)	In the Query Editor, modify the provided script to suit your specific needs to create the new record.
+		iii)	Gather the specific text strings to modify the template.
+			A)	Copy/Paste the User ID (a string - nvarchar datatype - for the GUID that identifies the particular User).
+				1)	Open a select query to capture the particular ID for the User.
+				2)	Right click on the [AspNetUsers]::datatable. 
+				3)	Select "Select Top 1000 Rows". A datagrid will then populate with the records already in the datatable.
+				4)	Left-click on the particular [Id] of the User, then right-click and select, "Copy".
+				5)	Right-click to paste the [Id] string into the query window of the [newInsertQuery.sql] file (N'<ParticularUserGuid>'). 
+			B)	Copy/Paste the Role ID (a string - nvarchar datatype that identifies the particular Role). 
+				1)	Open a select query to capture the particular ID for the Role.
+				2)	Right click on the [AspNetRoles]::datatable. 
+				3)	Select "Select Top 1000 Rows". A datagrid will then populate with the records already in the datatable.
+				4)	Left-click on the particular [Id] of the Role, then right-click and select, "Copy".
+				5)	Right-click to paste the [Id] string into the query window of the [newInsertQuery.sql] file (N'<ParticularRoleNameId>'). 
+		iv)	Execute the query.
 					
 					USE [aspnet-myBlazerApp-2026-03-21]
 					GO
@@ -231,10 +275,12 @@ B.	Assign Roles to Users.
 3.	The Blazor web app is now ready for use/testing.
 
 4. Use Visual Studio to test the code for functionality. 
-	A. Use the Visual Studio (integral debugging) Web Browser to verify functionality: 
-		1) User log-in.
-		2) User authorization. 
 
+	A. Use the Visual Studio (integral debugging) Web Browser to verify functionality: 
+		
+		1) User log-in.
+		
+		2) User authorization. 
 
 ###	Necessary Files
 
