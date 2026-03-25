@@ -94,23 +94,23 @@ The application uses SQL Server and entity framework.
 
 	A.	From the Visual Studio IDE
 		
-		1) NEW: Create a new Blazor web app.
+1) NEW: Create a new Blazor web app.
 		
-		2) Set the name for the new web app (for example, <myBlazorApp>).
+2) Set the name for the new web app (for example, <myBlazorApp>).
 		
-		3) Select 'Individual Accounts' as Authentication type (necessary for user authentication).
+3) Select 'Individual Accounts' as Authentication type (necessary for user authentication).
 		
-		4) Select 'Include sample pages' (necessary for adding new users with the 'Register' page).
+4) Select 'Include sample pages' (necessary for adding new users with the 'Register' page).
 		
-		5) The IDE creates and opens the new Blazor Web App.
+5) The IDE creates and opens the new Blazor Web App.
 		
-	B.	Set the connection string for the Microsoft SQL Server database (in the /appsettings.json file).
+B.	Set the connection string for the Microsoft SQL Server database (in the /appsettings.json file).
 		
-		NOTE - SQL Server installed on the development machine. 
+	NOTE - SQL Server installed on the development machine. 
 
-		NOTE - Be sure to include, 'TrustServerCertificate=true;' because you are using a bogus certificate for development.
+	NOTE - Be sure to include, 'TrustServerCertificate=true;' because you are using a bogus certificate for development.
 
-		1) Edit the (/appsettings.json) file.
+1) Edit the (/appsettings.json) file.
 		
 				"ConnectionStrings": {"DefaultConnection": 
 					"Server=myDevelpmentPC;Database=aspnet-myBlazorApp-2026-03-21;
