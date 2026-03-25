@@ -61,7 +61,7 @@ The following tools are necessary:
 1. Windows 11 Pro, v25H2 (with current Windows Update applied)
 2. [Install .NET 10.0.201](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
 3. [Install SQL Server Management Studio, v22.4.1](https://learn.microsoft.com/en-us/ssms/install/install)
-4. [Install Microsoft SQL Server 2025, Standard Developer Edition, 17.0.1105.2 (X64)] (https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+4. [Install Microsoft SQL Server 2025, Standard Developer Edition, 17.0.1105.2 (X64)](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 5. [Install Visual Studio 2026, v18.4.1](https://visualstudio.microsoft.com/downloads/).
 
 ### Database
@@ -81,14 +81,13 @@ The application uses SQL Server and entity framework.
 	B.	Set the connection string for the Microsoft SQL Server database (in the /appsettings.json file).
 		NOTE - SQL Server installed on the development machine. 
 		NOTE - Be sure to include, 'TrustServerCertificate=true;' because you are using a bogus certificate for development.
-
 		1) Edit the (/appsettings.json) file.
 		
 				"ConnectionStrings": {"DefaultConnection": 
-				"Server=myDevelpmentPC;Database=aspnet-myBlazorApp-2026-03-21;
-				TrustServerCertificate=true;
-				Trusted_Connection=True;
-				MultipleActiveResultSets=true"},
+					"Server=myDevelpmentPC;Database=aspnet-myBlazorApp-2026-03-21;
+					TrustServerCertificate=true;
+					Trusted_Connection=True;
+					MultipleActiveResultSets=true"},
 
 	C. Build the ASP.NET database using the automated tools in Visual Studio. 
 		1)	Look for the Tools menu located at the upper menu bar in Visual Studio.
@@ -115,23 +114,21 @@ The application uses SQL Server and entity framework.
 	E.	Add scripting to create the desired form controls for the target web page (/Components/Pages/Weather.razor).
 		For this article, add a AuthorizeView form control to vary the page content per developer-defined Role-based security. 
 
-
-
 				@page "/weather"
 				@attribute [StreamRendering]
 				@using Microsoft.AspNetCore.Identity;	 
 				@using myBlazorApp.Data;	
-<AuthorizeView Roles="Analysts,Developers,SalesClerks">
-<Authorized>
-    <p>Welcome, authorized user.</p>
-    <p>Protected content goes here!</p>
-</Authorized>
-<NotAuthorized>
-    <p>You are not authorized to view this content.</p>
-</NotAuthorized>
-</AuthorizeView>
 
-					
+				<AuthorizeView Roles="Analysts,Developers,SalesClerks">
+				<Authorized>
+					<p>Welcome, authorized user.</p>
+					<p>Protected content goes here!</p>
+				</Authorized>
+				<NotAuthorized>
+					<p>You are not authorized to view this content.</p>
+				</NotAuthorized>
+				</AuthorizeView>
+		
 F. Save the changes.
 			1) Clean Build.
 			2) Rebuild.
@@ -162,13 +159,13 @@ F. Save the changes.
 							USE [aspnet-myBlazerApp-2026-03-21]		
 							GO
 							INSERT INTO [dbo].[AspNetRoles]
-						   ([Id]
-						   ,[Name]
-						   ,[NormalizedName])
-						   VALUES
-						   (N''
-						   ,N''
-						   ,N'')
+									( [Id]
+									 ,[Name]
+								     ,[NormalizedName])
+							   VALUES
+								   ( N''
+									,N''
+									,N'')
 						   GO
 
 				f)	Execute the query.
