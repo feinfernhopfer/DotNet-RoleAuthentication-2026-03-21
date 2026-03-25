@@ -33,17 +33,17 @@ An easy and simple 20-minute process.
 
 5 - Use the Package Manager Console to Create and Configure an ASP.NET database (for the Identity and EntityFrameworkCore features)
 
-#### Manual Editing required: Editing required (Visual Studio): 
+##### Manual Editing required: Editing required (Visual Studio): 
 
 6 - Use the Visual Studio (integral debugging) Web Browser to Create New Users
 
-#### Manual Editing required: Editing required (SSMS): 
+##### Manual Editing required: Editing required (SSMS): 
 
 7 - Use SQL Server Management Studio to Create New Roles (for Users)
 
 8 - Use SQL Server Management Studio to Create New Assignment of Roles to Users
 
-#### Testing:  (Visual Studio): 
+##### Testing:  (Visual Studio): 
 
 9 - Use the Visual Studio (integral) Web Browser to test for functionality when using Authentication and Authorization features in a Blazor Web App
 
