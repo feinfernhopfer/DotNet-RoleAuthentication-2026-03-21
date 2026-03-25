@@ -120,21 +120,21 @@ NOTE - Be sure to include, 'TrustServerCertificate=true;' because you are using 
 
 	C. Build the ASP.NET database using the automated tools in Visual Studio. 
 		
-		1)	Look for the Tools menu located at the upper menu bar in Visual Studio.
+	1)	Look for the Tools menu located at the upper menu bar in Visual Studio.
 			
 				Tools > Nuget Package Manager > Package Manager Console
 
-		2)	The command line tool (PMC) opens at the center bottom pane of the IDE.
+	2)	The command line tool (PMC) opens at the center bottom pane of the IDE.
 			
-			Use the Update-database feature to create and configure the ASP.NET database for use with Blazor Authentication and Authorization. 
+		Use the Update-database feature to create and configure the ASP.NET database for use with Blazor Authentication and Authorization. 
 
 				>Update-Database
 
-			a)	Expect a 'Build succeeded' message followed by a brief pause, 
-				then wait for the success message, 'Done' 
-				(the Happy Path, else correct whatever went wrong and then repeat using the PMC).
+		a)	Expect a 'Build succeeded' message followed by a brief pause, 
+			then wait for the success message, 'Done' 
+			(the Happy Path, else correct whatever went wrong and then repeat using the PMC).
 
-			b)	The PMC indicates that database is ready for use ('Done.' message).
+		b)	The PMC indicates that database is ready for use ('Done.' message).
 	
 	D.	Configure the main web app file (/Program.cs). Add 4 lines of code. 
 
