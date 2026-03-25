@@ -134,28 +134,28 @@ F. Save the changes.
 			2) Rebuild.
 			3) Save All.
 
-	G.	Create the new Users.
-		Use Visual Studio debugging browser to create the new Users. 
-		1)	Run the app in the IDE.
-		2)	Use the REGISTER page to create a new user. 
-			a) Enter the user specifics. 
-			b) Click here to confirm your account.
-			c) Log in.
-			d) Log out.
-	H.	Repeat the steps for each new record to be created in the [AspNetUsers]::datatable.
+G.	Create the new Users.
+	Use Visual Studio debugging browser to create the new Users. 
+	1)	Run the app in the IDE.
+	2)	Use the REGISTER page to create a new user. 
+		a) Enter the user specifics. 
+		b) Click here to confirm your account.
+		c) Log in.
+		d) Log out.
+H.	Repeat the steps for each new record to be created in the [AspNetUsers]::datatable.
 
-	2. Use SQL Server Management Studio to add functionality to the Web App. 
-		A. Create the new Roles.
-		Use SQL Server Management Studio to create the new Roles.
-		Use the command line window to write the TSQL script to create the new records for Roles.
-			1) Open SSMS.
-			2) Use the command line window to write the TSQL script to create the new Roles.
-				a)	In the Explorer pane located at the left of the IDE, right-click on the [AspNetRoles]::datatable.
-				b)	Select "Script Table as"...
-				c)	Select "Insert to"...
-				d)	Select "New Query Editor Window".
-				e)	Modify the template to match the specifics for creating a new record.
-							
+2. Use SQL Server Management Studio to add functionality to the Web App. 
+	A. Create the new Roles.
+	Use SQL Server Management Studio to create the new Roles.
+	Use the command line window to write the TSQL script to create the new records for Roles.
+		1) Open SSMS.
+		2) Use the command line window to write the TSQL script to create the new Roles.
+			a)	In the Explorer pane located at the left of the IDE, right-click on the [AspNetRoles]::datatable.
+			b)	Select "Script Table as"...
+			c)	Select "Insert to"...
+			d)	Select "New Query Editor Window".
+			e)	Modify the template to match the specifics for creating a new record.
+			
 							USE [aspnet-myBlazerApp-2026-03-21]		
 							GO
 							INSERT INTO [dbo].[AspNetRoles]
@@ -170,6 +170,7 @@ F. Save the changes.
 
 				f)	Execute the query.
 				g)	Repeat the steps for each new record to be created in the [AspNetRoles]::datatable.
+					
 7.	Assign Roles to Users.
 	Use SQL Server Management Studio to assign Roles to Users.
 	Use the command line window to write the TSQL script to create the new records for User-Roles.
