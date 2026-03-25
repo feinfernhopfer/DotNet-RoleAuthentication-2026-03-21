@@ -106,9 +106,9 @@ The application uses SQL Server and entity framework.
 		
 B.	Set the connection string for the Microsoft SQL Server database (in the /appsettings.json file).
 		
-	NOTE - SQL Server installed on the development machine. 
+NOTE - SQL Server installed on the development machine. 
 
-	NOTE - Be sure to include, 'TrustServerCertificate=true;' because you are using a bogus certificate for development.
+NOTE - Be sure to include, 'TrustServerCertificate=true;' because you are using a bogus certificate for development.
 
 1) Edit the (/appsettings.json) file.
 		
