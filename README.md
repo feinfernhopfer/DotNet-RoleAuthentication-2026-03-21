@@ -295,8 +295,8 @@ B)	Copy/Paste the Role ID (a string - nvarchar datatype that identifies the part
 
 4. Use Visual Studio to test the code for functionality. 
 
-	A. Use the Visual Studio (integral debugging) Web Browser to verify functionality:
-		
+	A. Use the Visual Studio (integral debugging) Web Browser to verify functionality
+	
 		1) User log-in.
 		
 		2) User authorization. 
