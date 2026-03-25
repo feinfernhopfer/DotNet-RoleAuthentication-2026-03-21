@@ -225,8 +225,11 @@ H.	Repeat the steps for each new record to be created in the [AspNetUsers]::data
 									,N'')
 						   GO
 
-			f)	Execute the query.
-			g)	Repeat the steps for each new record to be created in the [AspNetRoles]::datatable.
+	
+
+	f)	Execute the query.
+		
+	g)	Repeat the steps for each new record to be created in the [AspNetRoles]::datatable.
 					
 B.	Assign Roles to Users.
 	
