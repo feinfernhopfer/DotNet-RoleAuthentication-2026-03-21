@@ -243,8 +243,8 @@ Use the command line window to write the TSQL script to create the new records f
 4).	Select "New Query Editor Window".
 
 a)	Prepare a new INSERT query.
-
-	i)	A template will appear in the window. Modify the template to match your needs, then create the new record.
+	
+i)	A template will appear in the window. Modify the template to match your needs, then create the new record.
 	
 	ii)	In the Query Editor, modify the provided script to suit your specific needs to create the new record.
 		
@@ -276,6 +276,11 @@ a)	Prepare a new INSERT query.
 				
 	iv)	Execute the query.		
 					
+
+
+
+
+
 					USE [aspnet-myBlazerApp-2026-03-21]
 					GO
 					INSERT INTO [dbo].[AspNetUserRoles]
