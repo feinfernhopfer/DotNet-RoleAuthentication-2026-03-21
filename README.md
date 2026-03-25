@@ -18,34 +18,41 @@ Note - The code and script used here worked well with the Community Edition(s) o
 
 An easy and simple 20-minute process.
 
-### Manual Editing required (Visual Studio): 
+ Manual Editing required (Visual Studio): 
 1 - Create a new Blazor Web App using 'Individual Accounts' for Authentication Type (and 'Include sample pages')
 2 - Edit the Blazor App's /appsettings.json file to set the connection string for data access
 3 - Edit the Blazor App's /Program.cs file to use the Authentication and Authorization features
 4 - Edit the target pages to add an AuthorizeView control
 
-### Automated Editing required (Visual Studio): 
+ Automated Editing required (Visual Studio): 
 5 - Use the Package Manager Console to Create and Configure an ASP.NET database (for the Identity and EntityFrameworkCore features)
 
-### Manual Editing required: Editing required (Visual Studio): 
+ Manual Editing required: Editing required (Visual Studio): 
 6 - Use the Visual Studio (integral debugging) Web Browser to Create New Users
 
-### Manual Editing required: Editing required (SSMS): 
+ Manual Editing required: Editing required (SSMS): 
 7 - Use SQL Server Management Studio to Create New Roles (for Users)
 8 - Use SQL Server Management Studio to Create New Assignment of Roles to Users
 
-### Testing:  (Visual Studio): 
+ Testing:  (Visual Studio): 
 9 - Use the Visual Studio (integral) Web Browser to test for functionality when using Authentication and Authorization features in a Blazor Web App
 
 ## Why this article?
 
 Q. 	Why this article? 
+	
 A. 	Multiple reasons exist for why this article was written and published: 
+	
 	1. The Microsoft documentation team cannot publish updates fast enough to keep up with their in-house development team. 
+	
 		a. Updates to Dot NET often require updates to coding for use with Blazor Web Apps. 
+		
 		b. At least 19 changes in the past 8 years have broken legacy code for Microsoft Dot NET, and some of those changes have affected Role-based Authentication. 
-	2. Online postings to industry websites often contain outdated information, which was once helpful, but are now of no use at all; yet these pages are never taken out of publication, which causes a lot of frustration for web developers. 
+			
+	2. Online postings to industry websites often contain outdated information, which was once helpful, but are now of no use at all; yet these pages are never taken out of publication, which causes a lot of frustration for web developers.
+	
 	3. The ASP.NET database model has changed in recent months (online tutorials from August to October 2025 are no longer useful for Authentication/Authorization).
+	
     4. This article brings coding for [Role-based Authentication for Blazor Web Apps with Microsoft Dot NET 10] current as of 2026-03-21. 
 
 ## Prerequisites
